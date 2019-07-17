@@ -1,8 +1,8 @@
 (function () {
-	var viewFrame = document.getElementById('view-frame');
+	var viewFrame = document.getElementById("view-frame");
 
 	if (viewFrame && viewFrame.contentDocument) {
-		var svgElems = viewFrame.contentDocument.getElementsByTagName('svg');
+		var svgElems = viewFrame.contentDocument.getElementsByTagName("svg");
 
 		if (svgElems && svgElems.length) {
 			var svg = svgElems[0];
@@ -43,7 +43,7 @@
 	function saveSvg(svgEl, name) {
 		svgEl.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 		const svgData = svgEl.outerHTML;
-		const preface = '<?xml version="1.0" standalone="no"?>\r\n';
+		const preface = "<?xml version='1.0' standalone='no'?>";
 		const svgBlob = new Blob([preface, svgData], {type:"image/svg+xml;charset=utf-8"});
 		const downloadLink = document.createElement("a");
 		downloadLink.href = URL.createObjectURL(svgBlob);
