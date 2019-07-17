@@ -1,4 +1,4 @@
-# download-report-bookmarklet
+# Download Report Builder Chart from Browser :bar_chart:
 A small bookmarklet for downloading reports from Jazz Report Builder as SVG files.
 
 This will create an SVG file with the report looking exactly as it does in the browser. Report builder has the option to export as an SVG file but it doesn't look exactly the same. For example, the text size is much smaller in the exported SVG file created by report builder.
