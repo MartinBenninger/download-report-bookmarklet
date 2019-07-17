@@ -25,3 +25,5 @@ Make the changes that you want to the JavaScript code and save the file. Then fo
 - Give it a name e.g. 'Download Report'
 - In the URL input type `javascript:` and then paste the contents of `index.min.js`
 - Save the bookmark
+
+Note: If you want to create a link on a webpage, be sure to first encode the JavaScript with ``encodeURI(`code`)``.
