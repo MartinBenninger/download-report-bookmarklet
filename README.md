@@ -5,6 +5,7 @@ This will create an SVG file with the report looking exactly as it does in the b
 
 ## Usage
 - Drag this bookmarklet [Download Report](javascript:!function()%7Bvar%20e=document.getElementById(%22view-frame%22);if(e&&e.contentDocument)%7Bvar%20t=e.contentDocument.getElementsByTagName(%22svg%22);if(t&&t.length)%7Bvar%20o=t%5B0%5D;!function%20e(t,o=%7B%7D)%7Bif(!t)throw%20new%20Error(%22No%20element%20specified.%22);o.recursive&&Array.prototype.forEach.call(t.children,t=%3E%7Be(t,o)%7D);const%20r=getComputedStyle(t);Array.prototype.forEach.call(o.properties%7C%7Cr,e=%3E%7Bt.style%5Be%5D=r.getPropertyValue(e)%7D)%7D(o,%7Brecursive:!0%7D),function(e,t)%7Be.setAttribute(%22xmlns%22,%22http://www.w3.org/2000/svg%22);const%20o=e.outerHTML,r=new%20Blob(%5B%22%3C?xml%20version='1.0'%20standalone='no'?%3E%22,o%5D,%7Btype:%22image/svg+xml;charset=utf-8%22%7D),n=document.createElement(%22a%22);n.href=URL.createObjectURL(r),n.download=t,document.body.appendChild(n),n.click(),document.body.removeChild(n)%7D(o,%22report_%22+(new%20Date).toISOString()+%22.svg%22),alert(%22Done%22)%7Delse%20r()%7Delse%20r();function%20r()%7Balert(%22Couldn't%20find%20the%20report%20svg.%22)%7D%7D();) into the bookmarks bar.
+  - Note: This doesn't work when viewing directly from GitHub. [Click here to view on GitHub Pages.](https://martinbenninger.github.io/download-report-bookmarklet/)
 - Open a report in report builder and run it.
 - When the report is loaded, click the "Download Report" bookmark.
 - Within seconds, the report should automatically download as an SVG file.
